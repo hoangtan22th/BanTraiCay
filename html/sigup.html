@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ bán trái cây</title>
+    <title>Trang đăng kí</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/all.min.css">
     <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/js/all.min.js">
@@ -15,7 +15,7 @@
 
     <div class="wrapper">
         <header>
-            
+
             <div class="header">
                 <div class="header__logo">
                     <a href="../html/home.html">
@@ -47,7 +47,7 @@
                             <img src="../img/face.png" alt="" width="23px" height="23px" style="margin-right: 10px;">
                             <span style="color:var(--color-xam);">Tài khoản</span>
                         </a>
-                        
+
                     </a>
                     <a href="#">
                         <div class="header__cart">
@@ -67,106 +67,45 @@
                 <li><a href="#">LIÊN HỆ</a></li>
             </ul>
         </nav>
-        <div class="container">
-            <div class="details__name" >
-                <p id="details__name"></p>
-            </div>
-            <div class="details">
-                <div class="details__img" >
-                    <img  id="details__img" src="../img/nho.jpg" alt="" width="100%" height="100%">
+        <!-- modal  -->
+        <div class="modal" id="modal">
+            <div class="modal-inner">
+                <form action="" class="form-signup">
+                    
 
-                </div>
-                <div class="details__info">
-                    <div class="details__info__1">
-                        <div class="details__des" id="details__des">
-                            <p></p>
-                        </div>
-                        <div class="details__combo">
-    
-                            <div class="details__star">
-                                <i class="fa-solid fa-star" style="color: yellow;"></i>
-                                <i class="fa-solid fa-star" style="color: yellow;"></i>
-                                <i class="fa-solid fa-star" style="color: yellow;"></i>
-                                <i class="fa-solid fa-star" style="color: yellow;"></i>
-                                <i class="fa-solid fa-star" style="color: yellow;"></i>
-    
-    
-                            </div>
-                            <div class="details__sell">
-                                <p id="product__sell" style="font-size: 13px;"></p>
-                            </div>
-                        </div>
-                        <div class="details__price">
-                            <span id="details__price">123.456</span>
-                            <span class="dong">đ</span>
-                        </div>
+                    <div class="user">
+                        <img src="../img/login.png" alt="" width="100%" height="100%">
                     </div>
+                    <h2>Đăng nhập</h2>
 
-                    <div class="details__info__2">
-                        <div class="details__details">
-                            <h4 class="details__info__2__title"><b>Thông tin chi tiết</b></h4>
 
-                            <div class="block">
-                                <p>Thương hiệu</p>
-                                <p id="thuonghieu"></p>
-                            </div>
-                            <div class="block">
-                                <p>Xuất xứ (Made in)</p>
-                                <p>Việt Nam</p>
-                            </div>
-                            <div class="block">
-                                <p>Trọng lượng sản phẩm</p>
-                                <p>1 kg</p>
-                            </div>
-                            <div class="block">
-                                <p>Phương thức giao hàng Seller Delivery</p>
-                                <p>Nhà bán giao hàng cho khách hàng</p>
-                            </div>
-                        </div>
+                    <div class="form-group">
+                        
+                        <input type="text" placeholder="Tài khoản" id="LoginEmail"> 
                     </div>
-                    <div class="details__info__3">
-                        <h4 class="details__info__3__title"><b>Mô tả sản phẩm</b></h4>
-                        <p>Với sản phẩm tươi sống, trọng lượng thực tế có thể chênh lệch khoảng 10%.</p>
+                    
 
-                        <p>Ổi có dạng hình cầu tròn mọc theo từng chùm 3 quả một. Quả ổi nữ hoàng to hơn các giống ổi ta, mỗi trái trung bình khoảng 400g. Khi bổ ra sẽ thấy bên trong phần thịt quả khá dày và ruột rất nhỏ có một ít hạt. Từ bê trong ổi nữ hoảng tỏa ra một mùi thơm mát đặc trưng và khi ăn sẽ cảm nhận được độ giòn và ngọt nơi đầu lưỡi cho đến khi ăn hết quả.</p>
-
-                        <p>Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Bên cạnh đó, tuỳ vào loại sản phẩm, hình thức và địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển, phụ phí hàng cồng kềnh, thuế nhập khẩu (đối với đơn hàng giao từ nước ngoài có giá trị trên 1 triệu đồng).....</p>
+                    <div class="form-group">
+                        
+                        <input type="password" autocomplete="current-password" id="LoginPass" placeholder="Mật khẩu">
                     </div>
-                </div>
-                <div class="details__buy">
-                    <div class="details__shop">
-                        <img src="../img/logo.svg" alt="" width="40px" height="40px">
-                        <div class="details__shop__info">
-                            <div class="details__shop__info__name">
-                                <p>TANFRUITS</p>
-                                <span>5</span>
-                                <i class="fa-solid fa-star" style="color: yellow;"></i>
-                                <span>(9.0k+ đánh giá)</span>
-                            </div>
-                        </div>
-                        <div class="details__mess">
-                            <img src="../img/mess__details.png" alt="" width="20px" height="20px">
-                        </div>
+                    <div class="form-group">
+                        <input type="password" autocomplete="current-password" id="LoginPass2" placeholder="Nhập Lại Mật khẩu">
                     </div>
-                    <div class="details__total">
-                        <div class="details__total__title">
-                            <p style="margin:0px 10px;">Số lượng</p>
-                            <button class="btn__pre">-</button>
-                            <p class="details__number">1</p>
-                            <button class="btn__next">+</button>
-                        </div>
-                        <p class="details__total__tamtinh">Tạm tính</p>
-                        <p class="details__total__price" id="details__total__price"></p>
-                        <button class="buy__btn" type="submit">
-                            <span> Mua ngay</span>
-                        </button>
-                        <button class="product__btn" type="submit">
-                            <span> Thêm vào giỏ</span> <i class="fa-solid fa-plus"></i>
-                        </button>
+                    <div class="form-check">
+                        <input type="checkbox" name="" id="">
+                        <span>Bằng việc Đăng ký, bạn đã đọc và đồng ý với <a href="#">Điều khoản sử dụng</a> và <a href="#">Chính sách bảo mật</a> của TanFruits</span>
                     </div>
-                </div>
+                    <button class="btn__signup" id="Signup">Đăng Ký</button>
+                    <div class="dangkitkmoi">
+                        <p>Đã có tài khoản?</p>
+                        <a href="../html/login.html" style="text-indent: 10px; color: blue; font-weight: bold;"> Đăng nhập ngay</a>
+                    </div>
+                    
+                </form>
             </div>
         </div>
+        <!-- end modal  -->
         <div class="container">
             <footer class="footer">
                 <div class="block">

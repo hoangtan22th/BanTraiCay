@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ bán trái cây</title>
+    <title>Trang sản phẩm</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/all.min.css">
     <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/js/all.min.js">
@@ -15,6 +15,7 @@
 
     <div class="wrapper">
         <header>
+            
             <div class="header">
                 <div class="header__logo">
                     <a href="../html/home.html">
@@ -42,12 +43,11 @@
                         </div>
                     </a>
                     <a href="#">
-                        <div class="header__login">
-
+                        <a href="../html/login.html" class="header__login">
                             <img src="../img/face.png" alt="" width="23px" height="23px" style="margin-right: 10px;">
-
                             <span style="color:var(--color-xam);">Tài khoản</span>
-                        </div>
+                        </a>
+                        
                     </a>
                     <a href="#">
                         <div class="header__cart">
@@ -61,7 +61,7 @@
         <nav class="nav">
             <ul class="nav__menu">
                 <li><a href="../html/home.html">TRANG CHỦ</a></li>
-                <li><a href="#">GIỚI THIỆU</a></li>
+                <li><a href="../html/gioithieu.html">GIỚI THIỆU</a></li>
                 <li><a href="../html/product.html">SẢN PHẨM</a></li>
                 <li><a href="#">KHUYẾN MÃI</a></li>
                 <li><a href="#">LIÊN HỆ</a></li>
@@ -83,19 +83,18 @@
                         <li><a href="#"><img src="../img/h1.png" alt="">Trái Kiwi</a></li>
                         <li><a href="#"><img src="../img/h1.png" alt="">Xoài</a></li>
                         <li><a href="#"><img src="../img/h1.png" alt="">Đào & Mận</a></li>
-                        
+
                     </ul>
                 </div>
                 <div class="content">
                     
+                   
                     <div class="content__title">
                         <p></i> Tất cả sản phẩm</p>
 
                     </div>
-                   
-                    
                     <div class="product__list">
-                        <a href="#" class="product__link">
+                        <a href="../html/productDetails.html?product=0" class="product__link">
                             <div class="product">
                                 <div class="product__img">
                                     <img src="../img/nho.jpg" alt="">
@@ -104,42 +103,7 @@
                                     <img src="../img/chinhhang.png" alt="">
                                 </div>
                                 <div class="product__des">
-                                    <p>Nho Mỹ xuất khẩu từ Trung Quốc rất tốt cho sức khoẻ người Việt</p>
-                                </div>
-                                <div class="product__combo">
-
-                                    <div class="product__star">
-                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
-                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
-                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
-                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
-                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
-
-
-                                    </div>
-                                    <div class="product__sell" >
-                                        <p  style="font-size: 13px;">đã bán 60</p>
-                                    </div>
-                                </div>
-                                <div class="product__price" id="productPrice">
-                                    <span>123.456</span>
-                                    <span class="dong">đ</span>
-                                </div>
-                                <button class="product__btn" type="submit">
-                                    <span> Thêm vào giỏ</span> <i class="fa-solid fa-plus"></i>
-                                </button>
-                            </div>
-                        </a>
-                        <a href="#" class="product__link">
-                            <div class="product">
-                                <div class="product__img">
-                                    <img src="../img/nho.jpg" alt="">
-                                </div>
-                                <div class="product__check">
-                                    <img src="../img/chinhhang.png" alt="">
-                                </div>
-                                <div class="product__des">
-                                    <p>Nho Mỹ xuất khẩu từ Trung Quốc rất tốt cho sức khoẻ người Việt</p>
+                                    <p>Nho Mỹ xuất khẩu từ Trung Quốc</p>
                                 </div>
                                 <div class="product__combo">
 
@@ -165,16 +129,16 @@
                                 </button>
                             </div>
                         </a>
-                        <a href="#" class="product__link">
+                        <a href="../html/productDetails.html?product=1" class="product__link">
                             <div class="product">
                                 <div class="product__img">
-                                    <img src="../img/nho.jpg" alt="">
+                                    <img src="../img/le.jpg" alt="">
                                 </div>
                                 <div class="product__check">
                                     <img src="../img/chinhhang.png" alt="">
                                 </div>
                                 <div class="product__des">
-                                    <p>Nho Mỹ xuất khẩu từ Trung Quốc rất tốt cho sức khoẻ người Việt</p>
+                                    <p>Lê Xuất Nhập Khẩu</p>
                                 </div>
                                 <div class="product__combo">
 
@@ -188,11 +152,11 @@
 
                                     </div>
                                     <div class="product__sell">
-                                        <p style="font-size: 13px;">đã bán 60</p>
+                                        <p style="font-size: 13px;">đã bán 90</p>
                                     </div>
                                 </div>
                                 <div class="product__price">
-                                    <span>123.456</span>
+                                    <span>654.321</span>
                                     <span class="dong">đ</span>
                                 </div>
                                 <button class="product__btn" type="submit">
@@ -200,16 +164,16 @@
                                 </button>
                             </div>
                         </a>
-                        <a href="#" class="product__link">
+                        <a href="../html/productDetails.html?product=1" class="product__link">
                             <div class="product">
                                 <div class="product__img">
-                                    <img src="../img/nho.jpg" alt="">
+                                    <img src="../img/le.jpg" alt="">
                                 </div>
                                 <div class="product__check">
                                     <img src="../img/chinhhang.png" alt="">
                                 </div>
                                 <div class="product__des">
-                                    <p>Nho Mỹ xuất khẩu từ Trung Quốc rất tốt cho sức khoẻ người Việt</p>
+                                    <p>Lê Xuất Nhập Khẩu</p>
                                 </div>
                                 <div class="product__combo">
 
@@ -223,11 +187,11 @@
 
                                     </div>
                                     <div class="product__sell">
-                                        <p style="font-size: 13px;">đã bán 60</p>
+                                        <p style="font-size: 13px;">đã bán 90</p>
                                     </div>
                                 </div>
                                 <div class="product__price">
-                                    <span>123.456</span>
+                                    <span>654.321</span>
                                     <span class="dong">đ</span>
                                 </div>
                                 <button class="product__btn" type="submit">
@@ -235,16 +199,16 @@
                                 </button>
                             </div>
                         </a>
-                        <a href="#" class="product__link">
+                        <a href="../html/productDetails.html?product=1" class="product__link">
                             <div class="product">
                                 <div class="product__img">
-                                    <img src="../img/nho.jpg" alt="">
+                                    <img src="../img/le.jpg" alt="">
                                 </div>
                                 <div class="product__check">
                                     <img src="../img/chinhhang.png" alt="">
                                 </div>
                                 <div class="product__des">
-                                    <p>Nho Mỹ xuất khẩu từ Trung Quốc rất tốt cho sức khoẻ người Việt</p>
+                                    <p>Lê Xuất Nhập Khẩu</p>
                                 </div>
                                 <div class="product__combo">
 
@@ -258,11 +222,11 @@
 
                                     </div>
                                     <div class="product__sell">
-                                        <p style="font-size: 13px;">đã bán 60</p>
+                                        <p style="font-size: 13px;">đã bán 90</p>
                                     </div>
                                 </div>
                                 <div class="product__price">
-                                    <span>123.456</span>
+                                    <span>654.321</span>
                                     <span class="dong">đ</span>
                                 </div>
                                 <button class="product__btn" type="submit">
@@ -270,194 +234,91 @@
                                 </button>
                             </div>
                         </a>
-                        <a href="#" class="product__link">
-                            <div class="product">
-                                <div class="product__img">
-                                    <img src="../img/nho.jpg" alt="">
-                                </div>
-                                <div class="product__check">
-                                    <img src="../img/chinhhang.png" alt="">
-                                </div>
-                                <div class="product__des">
-                                    <p>Nho Mỹ xuất khẩu từ Trung Quốc rất tốt cho sức khoẻ người Việt</p>
-                                </div>
-                                <div class="product__combo">
 
-                                    <div class="product__star">
-                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
-                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
-                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
-                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
-                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
-
-
-                                    </div>
-                                    <div class="product__sell">
-                                        <p style="font-size: 13px;">đã bán 60</p>
-                                    </div>
-                                </div>
-                                <div class="product__price">
-                                    <span>123.456</span>
-                                    <span class="dong">đ</span>
-                                </div>
-                                <button class="product__btn" type="submit">
-                                    <span> Thêm vào giỏ</span> <i class="fa-solid fa-plus"></i>
-                                </button>
-                            </div>
-                        </a>
-                        <a href="#" class="product__link">
-                            <div class="product">
-                                <div class="product__img">
-                                    <img src="../img/nho.jpg" alt="">
-                                </div>
-                                <div class="product__check">
-                                    <img src="../img/chinhhang.png" alt="">
-                                </div>
-                                <div class="product__des">
-                                    <p>Nho Mỹ xuất khẩu từ Trung Quốc rất tốt cho sức khoẻ người Việt</p>
-                                </div>
-                                <div class="product__combo">
-
-                                    <div class="product__star">
-                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
-                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
-                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
-                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
-                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
-
-
-                                    </div>
-                                    <div class="product__sell">
-                                        <p style="font-size: 13px;">đã bán 60</p>
-                                    </div>
-                                </div>
-                                <div class="product__price">
-                                    <span>123.456</span>
-                                    <span class="dong">đ</span>
-                                </div>
-                                <button class="product__btn" type="submit">
-                                    <span> Thêm vào giỏ</span> <i class="fa-solid fa-plus"></i>
-                                </button>
-                            </div>
-                        </a>
-                        <a href="#" class="product__link">
-                            <div class="product">
-                                <div class="product__img">
-                                    <img src="../img/nho.jpg" alt="">
-                                </div>
-                                <div class="product__check">
-                                    <img src="../img/chinhhang.png" alt="">
-                                </div>
-                                <div class="product__des">
-                                    <p>Nho Mỹ xuất khẩu từ Trung Quốc rất tốt cho sức khoẻ người Việt</p>
-                                </div>
-                                <div class="product__combo">
-
-                                    <div class="product__star">
-                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
-                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
-                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
-                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
-                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
-
-
-                                    </div>
-                                    <div class="product__sell">
-                                        <p style="font-size: 13px;">đã bán 60</p>
-                                    </div>
-                                </div>
-                                <div class="product__price">
-                                    <span>123.456</span>
-                                    <span class="dong">đ</span>
-                                </div>
-                                <button class="product__btn" type="submit">
-                                    <span> Thêm vào giỏ</span> <i class="fa-solid fa-plus"></i>
-                                </button>
-                            </div>
-                        </a>
 
                     </div>
+                    
                 </div>
             </div>
         </div>
-       <div class="container">
-        <footer class="footer">
-            <div class="block">
-                <h4>Hỗ trợ khách hàng</h4>
-                <p href="#">
-                    Hotline: 1900-6035
-                    <span>(1000 đ/phút, 8-21h kể cả T7, CN)</span>
-                </p>
-                
-                <p><a href="#">Các câu hỏi thường gặp</a></p>
-                <p><a href="#">Gửi yêu cầu hỗ trợ</a></p>
-                <p><a href="#">Hướng dẫn đặt hàng</a></p>
-                <p><a href="#">Phương thức vận chuyển</a></p>
-                <p><a href="#">Chính sách đổi trả</a></p>
-                <p><a href="#">Hướng dẫn trả góp</a></p>
-                <p><a href="#">Chính sách hàng nhập khẩu</a></p>
-                
-                
-            </div>
-            <div class="block">
-                <h4>Về TanFruits</h4>
-               <p><a href="#">Giới thiệu TanFruits</a></p>
-                <p><a href="#">TanFruits Blog</a></p>
-                <p><a href="#">Tuyển dụng</a></p>
-                <p><a href="#">Chính sách bảo mật thanh toán</a></p>
-                <p><a href="#">Chính sách bảo mật thông tin cá nhân</a></p>
-                <p><a href="#">Chính sách giải quyết khiếu nại</a></p>
-                <p><a href="#">Điều khoản sử dụng</a></p>
-                <p><a href="#">Điều kiện vận chuyển</a></p>
-                
-            </div>
-            <div class="block">
-                <h4 style="margin-bottom:20px;">Phương thức thanh toán</h4>
-                <div class="visa">
-                    <img src="../img/visa.png" alt="">
-                    <img src="../img/visa2.png" alt="">
-                    <img src="../img/visa3.png" alt="">
-                    <img src="../img/visa4.png" alt="">
-                    <img src="../img/visa6.png" alt="">
-                    <img src="../img/visa5.png" alt="">
-                </div>
-                <h4 style="margin: 15px 0px;">Hổ trợ vận chuyển</h4>
-                <div class="visa">
-                    <img src="../img/vanchuyen1.png" alt="">
-                    <img src="../img/vanchuyen2.png" alt="">
-                    <img src="../img/vanchuyen3.png" alt="">
-                    <img src="../img/vanchuyen4.png" alt="">
-                    <img src="../img/vanchuyen5.png" alt="">
-                    <img src="../img/vanchuyen6.png" alt="">
-                    <img src="../img/vanchuyen7.png" alt="">
-                    <img src="../img/vanchuyen8.png" alt="">
-                    <img src="../img/vanchuyen9.png" alt="">
-                    <img src="../img/vanchuyen10.png" alt="">
-                    
-                </div>
-            </div>
-            <div class="block">
-                <h4>Theo dõi chúng tôi trên</h4>
-                <a href="#" style="display: block;">
-                    <i class="fa-brands fa-facebook"></i>
-                    <span>Facebook</span>
-                </a>
-                <a href="#" style="display: block;">
+        <div class="container">
+            <footer class="footer">
+                <div class="block">
+                    <h4>Hỗ trợ khách hàng</h4>
+                    <p href="#">
+                        Hotline: 1900-6035
+                        <span>(1000 đ/phút, 8-21h kể cả T7, CN)</span>
+                    </p>
 
-                    <i class="fa-brands fa-instagram"></i>
-                    <span>Instagram</span>
-                </a>
-                <a href="#" style="display: block;">
+                    <p><a href="#">Các câu hỏi thường gặp</a></p>
+                    <p><a href="#">Gửi yêu cầu hỗ trợ</a></p>
+                    <p><a href="#">Hướng dẫn đặt hàng</a></p>
+                    <p><a href="#">Phương thức vận chuyển</a></p>
+                    <p><a href="#">Chính sách đổi trả</a></p>
+                    <p><a href="#">Hướng dẫn trả góp</a></p>
+                    <p><a href="#">Chính sách hàng nhập khẩu</a></p>
 
-                    <i class="fa-brands fa-linkedin"></i>
-                    <span>LikedIn</span>
-                </a>
-                    
-                
-            </div>
-        </footer>
-        
-       </div>
+
+                </div>
+                <div class="block">
+                    <h4>Về TanFruits</h4>
+                    <p><a href="#">Giới thiệu TanFruits</a></p>
+                    <p><a href="#">TanFruits Blog</a></p>
+                    <p><a href="#">Tuyển dụng</a></p>
+                    <p><a href="#">Chính sách bảo mật thanh toán</a></p>
+                    <p><a href="#">Chính sách bảo mật thông tin cá nhân</a></p>
+                    <p><a href="#">Chính sách giải quyết khiếu nại</a></p>
+                    <p><a href="#">Điều khoản sử dụng</a></p>
+                    <p><a href="#">Điều kiện vận chuyển</a></p>
+
+                </div>
+                <div class="block">
+                    <h4 style="margin-bottom:20px;">Phương thức thanh toán</h4>
+                    <div class="visa">
+                        <img src="../img/visa.png" alt="">
+                        <img src="../img/visa2.png" alt="">
+                        <img src="../img/visa3.png" alt="">
+                        <img src="../img/visa4.png" alt="">
+                        <img src="../img/visa6.png" alt="">
+                        <img src="../img/visa5.png" alt="">
+                    </div>
+                    <h4 style="margin: 15px 0px;">Hổ trợ vận chuyển</h4>
+                    <div class="visa">
+                        <img src="../img/vanchuyen1.png" alt="">
+                        <img src="../img/vanchuyen2.png" alt="">
+                        <img src="../img/vanchuyen3.png" alt="">
+                        <img src="../img/vanchuyen4.png" alt="">
+                        <img src="../img/vanchuyen5.png" alt="">
+                        <img src="../img/vanchuyen6.png" alt="">
+                        <img src="../img/vanchuyen7.png" alt="">
+                        <img src="../img/vanchuyen8.png" alt="">
+                        <img src="../img/vanchuyen9.png" alt="">
+                        <img src="../img/vanchuyen10.png" alt="">
+
+                    </div>
+                </div>
+                <div class="block">
+                    <h4>Theo dõi chúng tôi trên</h4>
+                    <a href="#" style="display: block;">
+                        <i class="fa-brands fa-facebook"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="#" style="display: block;">
+
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="#" style="display: block;">
+
+                        <i class="fa-brands fa-linkedin"></i>
+                        <span>LikedIn</span>
+                    </a>
+
+
+                </div>
+            </footer>
+
+        </div>
     </div>
 
 </body>
