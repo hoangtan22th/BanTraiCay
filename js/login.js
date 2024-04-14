@@ -9,7 +9,7 @@ window.onload = function () {
         var user = localStorage.getItem(username);
         var data = JSON.parse(user);
         if(user == null){
-            alert("Vui lòng nhập tài khoản và mật khẩu")
+            alert("Tài khoản hoặc mật khẩu không chính xác!!")
         }
         else if(username == data.username && password == data.password)
         {
@@ -19,7 +19,7 @@ window.onload = function () {
             window.location.href = "../html/home.html";
         }
         else{
-            alert("Tài khoản hoặc mật khẩu không chính xác!!");
+            alert("Vui lòng nhập tài khoản và mật khẩu");
         }
     })
 
