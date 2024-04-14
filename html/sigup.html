@@ -87,32 +87,35 @@
                     
                     <div class="form-group">
                         
-                        <input type="date" placeholder="Ngày sinh" id=""> 
+                        <input type="date" placeholder="Ngày sinh" id="txtNgaySinh"> 
                     </div>
-                    <div class="form-group radio__gender">
+                    <p class="erorr" id="tbNgaySinh" style="text-align: left;">*</p>
+
+                    <div class="form-group radio__gender" id="txtGender">
                         <input type="radio" name="gender" id="male"> <label for="male">Nam</label>
                         <input type="radio" name="gender" id="female"> <labe for="female">Nữ</labe>   
                     </div>
-                    <p class="erorr" id="tbHoTen" style="text-align: left;">Không được làm bê đê</p>
+                    <p class="erorr" id="tbGender" style="text-align: left;">*</p>
+                    
                     
                     <div class="form-group">
                         
-                        <input type="text" placeholder="Địa chỉ" id=""> 
-                    <p class="erorr" id="tbHoTen" style="text-align: left;">Vô gia cư cút</p>
+                        <input type="text" placeholder="Địa chỉ" id="txtDiaChi"> 
+                    <p class="erorr" id="tbDiaChi" style="text-align: left;">*</p>
 
                         
                     </div>
                     <div class="form-group">
                         
-                        <input type="text" placeholder="Điện thoại" id=""> 
-                        <p class="erorr" id="tbHoTen" style="text-align: left;">Không điện thoại cút</p>
+                        <input type="text" placeholder="Điện thoại" id="txtDienThoai"> 
+                        <p class="erorr" id="tbDienThoai" style="text-align: left;">*</p>
                         
                         
                     </div>
                     <div class="form-group">
                         
-                        <input type="email" placeholder="Email" id=""> 
-                        <p class="erorr" id="tbHoTen" style="text-align: left;">Không email cút</p>
+                        <input type="email" placeholder="Email" id="txtEmail"> 
+                        <p class="erorr" id="tbEmail" style="text-align: left;">*</p>
 
                         
                     </div>
@@ -131,15 +134,21 @@
 
                     <div class="form-group">
                         
-                        <input type="text" placeholder="Tài khoản" id=""> 
+                        <input type="text" placeholder="Tài khoản" id="txtTaiKhoan"> 
+                        <p class="erorr" id="tbTaiKhoan">*</p>
+
                     </div>
 
                     <div class="form-group">
                         
-                        <input type="password" autocomplete="current-password" id="LoginPass" placeholder="Mật khẩu">
+                        <input type="password" autocomplete="current-password" id="txtMatKhau" placeholder="Mật khẩu">
+                        <p class="erorr" id="tbMatKhau">*</p>
+
                     </div>
                     <div class="form-group">
-                        <input type="password" autocomplete="current-password" id="LoginPass2" placeholder="Nhập Lại Mật khẩu">
+                        <input type="password" autocomplete="current-password" id="txtMatKhau2" placeholder="Nhập Lại Mật khẩu">
+                        <p class="erorr" id="tbMatKhau2">*</p>
+
                     </div>
                     <div class="form-check">
                         <input type="checkbox" name="" id="">

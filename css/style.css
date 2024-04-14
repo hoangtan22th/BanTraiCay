@@ -12,6 +12,7 @@
 * {
     margin: 0;
     padding: 0;
+    user-select: none;
 }
 
 a {
@@ -138,8 +139,23 @@ header{
     align-items: center;
 
 }
+#iconLogin,#btn__logout,#userId{
+    display: none;
+}
+.btn__logout{
+    width: 130px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: var(--color-xanh-bien);
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+.btn__logout:hover{
+    background-color: #3082e0;
 
-
+}
 /* phan navbar  */
 
 .nav {

@@ -15,7 +15,7 @@
 
     <div class="wrapper">
         <header>
-            
+            <!-- <div id="userInfo">eeeeee</div> -->
             <div class="header">
                 <div class="header__logo">
                     <a href="../html/home.html">
@@ -42,13 +42,20 @@
                             <span style="color:var(--color-xanh-bien);">Trang chủ</span>
                         </div>
                     </a>
-                    <a href="#">
-                        <a href="../html/login.html" class="header__login">
-                            <img src="../img/face.png" alt="" width="23px" height="23px" style="margin-right: 10px;">
-                            <span style="color:var(--color-xam);">Tài khoản</span>
-                        </a>
-                        
+                    <a href="../html/login.html" class="header__login">
+                        <img id="iconNoLogin" src="../img/face.png" alt="" width="23px" height="23px"
+                            style="margin-right: 10px;">
+                        <span id="userNoId" style="color:var(--color-xam);">Tài khoản</span>
                     </a>
+                    <div style="display: flex; align-items: center;
+                        padding: 10px;">
+                        <img id="iconLogin" src="../img/face.png" alt="" width="23px" height="23px"
+                            style="margin-right: 10px;">
+                        <span id="userId" style="color:var(--color-xam);"></span>
+                    </div>
+
+                    <button class="btn__logout" id="btn__logout">Đăng xuất</button>
+
                     <a href="#">
                         <div class="header__cart">
                             <i class="fa-solid fa-cart-shopping"
