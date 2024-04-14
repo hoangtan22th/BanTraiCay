@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/all.min.css">
     <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/js/all.min.js">
     <script src="../js/main.js"></script>
+    <script src="../js/search.js"></script>
     
     
 
@@ -27,8 +28,8 @@
                 </div>
                 <div class="header__search">
                     <img src="../img/search.png" alt="">
-                    <input type="text" placeholder="Bạn cần tìm sản phẩm gì? " class="header__search__input">
-                    <a href="#">Tìm</a>
+                    <input type="text" placeholder="Bạn cần tìm sản phẩm gì? " class="header__search__input" id="header__search__input">
+                    <a href="#" id="btn__tim">Tìm</a>
                 </div>
                 <div class="header__phone">
                     <i class="fa-solid fa-headphones-simple"
@@ -70,11 +71,11 @@
         </header>
         <nav class="nav">
             <ul class="nav__menu">
-                <li><a href="../html/home.html">TRANG CHỦ</a></li>
-                <li><a href="../html/gioithieu.html">GIỚI THIỆU</a></li>
-                <li><a href="../html/product.html">SẢN PHẨM</a></li>
-                <li><a href="#">KHUYẾN MÃI</a></li>
-                <li><a href="#">LIÊN HỆ</a></li>
+                <li><a href="../html/home.html"><span>TRANG CHỦ</span></a></li>
+                <li><a href="../html/gioithieu.html"><span>GIỚI THIỆU</span></a></li>
+                <li><a href="../html/product.html"><span>SẢN PHẨM</span></a></li>
+                <li><a href="#"><span>KHUYẾN MÃI</span></a></li>
+                <li><a href="#"><span>LIÊN HỆ</span></a></li>
             </ul>
         </nav>
         <div class="container">
@@ -85,13 +86,14 @@
 
                     <ul style="text-align: left;" class="sidebar__list">
 
-                        <li><a href="#"><img src="../img/h1.png" alt="">Táo & Lê</a></li>
-                        <li><a href="#"><img src="../img/h1.png" alt="">Trái bơ</a></li>
-                        <li><a href="#"><img src="../img/h1.png" alt="">Chuối</a></li>
-                        <li><a href="#"><img src="../img/h1.png" alt="">Cam,Quýt & Bưởi</a></li>
+                        <li><a href="#"><img src="../img/h1.png" alt="">Trái Táo</a></li>
+                        <li><a href="#"><img src="../img/h1.png" alt="">Trái Lê</a></li>               
+                        <li><a href="#"><img src="../img/h1.png" alt="">Trái Chuối</a></li>
+                        <li><a href="#"><img src="../img/h1.png" alt="">Cam,Quýt</a></li>
+                        <li><a href="#"><img src="../img/h1.png" alt="">Trái Bưởi</a></li>
                         <li><a href="#"><img src="../img/h1.png" alt="">Nho & Cherry</a></li>
                         <li><a href="#"><img src="../img/h1.png" alt="">Trái Kiwi</a></li>
-                        <li><a href="#"><img src="../img/h1.png" alt="">Xoài</a></li>
+                        <li><a href="#"><img src="../img/h1.png" alt="">Trái Xoài</a></li>
                         <li><a href="#"><img src="../img/h1.png" alt="">Đào & Mận</a></li>
 
                     </ul>
@@ -176,16 +178,16 @@
                                 </button>
                             </div>
                         </a>
-                        <a href="../html/productDetails.html?product=3" class="product__link">
+                        <a href="../html/productDetails.html?product=2" class="product__link">
                             <div class="product">
                                 <div class="product__img">
-                                    <img src="../img/le.jpg" alt="">
+                                    <img src="../img/tao.jpg" alt="">
                                 </div>
                                 <div class="product__check">
                                     <img src="../img/chinhhang.png" alt="">
                                 </div>
                                 <div class="product__des">
-                                    <p>Lê Việt Nam</p>
+                                    <p>Táo đỏ ít hột</p>
                                 </div>
                                 <div class="product__combo">
 
@@ -211,7 +213,7 @@
                                 </button>
                             </div>
                         </a>
-                        <a href="../html/productDetails.html?product=4" class="product__link">
+                        <a href="../html/productDetails.html?product=3" class="product__link">
                             <div class="product">
                                 <div class="product__img">
                                     <img src="../img/thom-dua.jpg" alt="">
@@ -246,8 +248,146 @@
                                 </button>
                             </div>
                         </a>
+                        <a href="../html/productDetails.html?product=4" class="product__link">
+                            <div class="product">
+                                <div class="product__img">
+                                    <img src="../img/buoi.jpg" alt="">
+                                </div>
+                                <div class="product__check">
+                                    <img src="../img/chinhhang.png" alt="">
+                                </div>
+                                <div class="product__des">
+                                    <p>Bưởi 5 roi Việt Nam</p>
+                                </div>
+                                <div class="product__combo">
+
+                                    <div class="product__star">
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
 
 
+                                    </div>
+                                    <div class="product__sell">
+                                        <p style="font-size: 13px;">đã bán 1223</p>
+                                    </div>
+                                </div>
+                                <div class="product__price">
+                                    <span>70.000</span>
+                                    <span class="dong">đ</span>
+                                </div>
+                                <button class="product__btn" type="submit">
+                                    <span> Thêm vào giỏ</span> <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </a>
+                        <a href="../html/productDetails.html?product=5" class="product__link">
+                            <div class="product">
+                                <div class="product__img">
+                                    <img src="../img/man.jpg" alt="">
+                                </div>
+                                <div class="product__check">
+                                    <img src="../img/chinhhang.png" alt="">
+                                </div>
+                                <div class="product__des">
+                                    <p>Mận Mà Việt Nam</p>
+                                </div>
+                                <div class="product__combo">
+
+                                    <div class="product__star">
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+
+
+                                    </div>
+                                    <div class="product__sell">
+                                        <p style="font-size: 13px;">đã bán 6900</p>
+                                    </div>
+                                </div>
+                                <div class="product__price">
+                                    <span>70.000</span>
+                                    <span class="dong">đ</span>
+                                </div>
+                                <button class="product__btn" type="submit">
+                                    <span> Thêm vào giỏ</span> <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </a>
+                        <a href="../html/productDetails.html?product=6" class="product__link">
+                            <div class="product">
+                                <div class="product__img">
+                                    <img src="../img/kiwi.jpg" alt="">
+                                </div>
+                                <div class="product__check">
+                                    <img src="../img/chinhhang.png" alt="">
+                                </div>
+                                <div class="product__des">
+                                    <p>Kiwi Trung Quốc</p>
+                                </div>
+                                <div class="product__combo">
+
+                                    <div class="product__star">
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+
+
+                                    </div>
+                                    <div class="product__sell">
+                                        <p style="font-size: 13px;">đã bán 300</p>
+                                    </div>
+                                </div>
+                                <div class="product__price">
+                                    <span>90.000</span>
+                                    <span class="dong">đ</span>
+                                </div>
+                                <button class="product__btn" type="submit">
+                                    <span> Thêm vào giỏ</span> <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </a>
+                        <a href="../html/productDetails.html?product=7" class="product__link">
+                            <div class="product">
+                                <div class="product__img">
+                                    <img src="../img/dau.jpg" alt="">
+                                </div>
+                                <div class="product__check">
+                                    <img src="../img/chinhhang.png" alt="">
+                                </div>
+                                <div class="product__des">
+                                    <p>Dâu Tằm Đà Lạt</p>
+                                </div>
+                                <div class="product__combo">
+
+                                    <div class="product__star">
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+
+
+                                    </div>
+                                    <div class="product__sell">
+                                        <p style="font-size: 13px;">đã bán 600</p>
+                                    </div>
+                                </div>
+                                <div class="product__price">
+                                    <span>150.000</span>
+                                    <span class="dong">đ</span>
+                                </div>
+                                <button class="product__btn" type="submit">
+                                    <span> Thêm vào giỏ</span> <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </a>
                     </div>
                     <div class="content__title">
                         <p></i> Gợi ý hôm nay</p>
@@ -324,16 +464,16 @@
                                 </button>
                             </div>
                         </a>
-                        <a href="../html/productDetails.html?product=3" class="product__link">
+                        <a href="../html/productDetails.html?product=2" class="product__link">
                             <div class="product">
                                 <div class="product__img">
-                                    <img src="../img/le.jpg" alt="">
+                                    <img src="../img/tao.jpg" alt="">
                                 </div>
                                 <div class="product__check">
                                     <img src="../img/chinhhang.png" alt="">
                                 </div>
                                 <div class="product__des">
-                                    <p>Lê Việt Nam</p>
+                                    <p>Táo đỏ ít hột</p>
                                 </div>
                                 <div class="product__combo">
 
@@ -359,7 +499,7 @@
                                 </button>
                             </div>
                         </a>
-                        <a href="../html/productDetails.html?product=4" class="product__link">
+                        <a href="../html/productDetails.html?product=3" class="product__link">
                             <div class="product">
                                 <div class="product__img">
                                     <img src="../img/thom-dua.jpg" alt="">
@@ -394,8 +534,146 @@
                                 </button>
                             </div>
                         </a>
+                        <a href="../html/productDetails.html?product=4" class="product__link">
+                            <div class="product">
+                                <div class="product__img">
+                                    <img src="../img/buoi.jpg" alt="">
+                                </div>
+                                <div class="product__check">
+                                    <img src="../img/chinhhang.png" alt="">
+                                </div>
+                                <div class="product__des">
+                                    <p>Bưởi 5 roi Việt Nam</p>
+                                </div>
+                                <div class="product__combo">
+
+                                    <div class="product__star">
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
 
 
+                                    </div>
+                                    <div class="product__sell">
+                                        <p style="font-size: 13px;">đã bán 1223</p>
+                                    </div>
+                                </div>
+                                <div class="product__price">
+                                    <span>70.000</span>
+                                    <span class="dong">đ</span>
+                                </div>
+                                <button class="product__btn" type="submit">
+                                    <span> Thêm vào giỏ</span> <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </a>
+                        <a href="../html/productDetails.html?product=5" class="product__link">
+                            <div class="product">
+                                <div class="product__img">
+                                    <img src="../img/man.jpg" alt="">
+                                </div>
+                                <div class="product__check">
+                                    <img src="../img/chinhhang.png" alt="">
+                                </div>
+                                <div class="product__des">
+                                    <p>Mận Mà Việt Nam</p>
+                                </div>
+                                <div class="product__combo">
+
+                                    <div class="product__star">
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+
+
+                                    </div>
+                                    <div class="product__sell">
+                                        <p style="font-size: 13px;">đã bán 6900</p>
+                                    </div>
+                                </div>
+                                <div class="product__price">
+                                    <span>70.000</span>
+                                    <span class="dong">đ</span>
+                                </div>
+                                <button class="product__btn" type="submit">
+                                    <span> Thêm vào giỏ</span> <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </a>
+                        <a href="../html/productDetails.html?product=6" class="product__link">
+                            <div class="product">
+                                <div class="product__img">
+                                    <img src="../img/kiwi.jpg" alt="">
+                                </div>
+                                <div class="product__check">
+                                    <img src="../img/chinhhang.png" alt="">
+                                </div>
+                                <div class="product__des">
+                                    <p>Kiwi Trung Quốc</p>
+                                </div>
+                                <div class="product__combo">
+
+                                    <div class="product__star">
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+
+
+                                    </div>
+                                    <div class="product__sell">
+                                        <p style="font-size: 13px;">đã bán 300</p>
+                                    </div>
+                                </div>
+                                <div class="product__price">
+                                    <span>90.000</span>
+                                    <span class="dong">đ</span>
+                                </div>
+                                <button class="product__btn" type="submit">
+                                    <span> Thêm vào giỏ</span> <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </a>
+                        <a href="../html/productDetails.html?product=7" class="product__link">
+                            <div class="product">
+                                <div class="product__img">
+                                    <img src="../img/dau.jpg" alt="">
+                                </div>
+                                <div class="product__check">
+                                    <img src="../img/chinhhang.png" alt="">
+                                </div>
+                                <div class="product__des">
+                                    <p>Dâu Tằm Đà Lạt</p>
+                                </div>
+                                <div class="product__combo">
+
+                                    <div class="product__star">
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+                                        <i class="fa-solid fa-star" style="color: yellow;"></i>
+
+
+                                    </div>
+                                    <div class="product__sell">
+                                        <p style="font-size: 13px;">đã bán 600</p>
+                                    </div>
+                                </div>
+                                <div class="product__price">
+                                    <span>150.000</span>
+                                    <span class="dong">đ</span>
+                                </div>
+                                <button class="product__btn" type="submit">
+                                    <span> Thêm vào giỏ</span> <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>

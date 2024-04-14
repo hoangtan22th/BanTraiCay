@@ -179,6 +179,13 @@ header{
 .nav ul li a {
 
     color: white;
+    
+
+}
+.nav ul li a span {
+    display: inline-block;
+    line-height: 49px;
+    
 
 }
 

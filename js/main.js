@@ -95,8 +95,8 @@ const products = [
     },
     // 2
     {
-        name: "Lê Việt Nam",
-        image: "../img/le.jpg",
+        name: "Táo đỏ ít hột",
+        image: "../img/tao.jpg",
         sell: "đã bán 432",
         price: 20.000,
         kilogram: "1 kg",
@@ -111,12 +111,13 @@ const products = [
         kilogram: "1 kg",
         thuongHieu: "TanFruits"
     },
+
     // 4
     {
-        name: "Trái Lê",
-        image: "../img/le.jpg",
-        sell: "đã bán 600",
-        price: 250.000,
+        name: "Bưởi 5 roi Việt Nam",
+        image: "../img/buoi.jpg",
+        sell: "đã bán 1223",
+        price: 70.000,
         kilogram: "1 kg",
         thuongHieu: "TanFruits"
     },
