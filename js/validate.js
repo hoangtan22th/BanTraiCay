@@ -1,8 +1,5 @@
 
 window.onload = function () {
-
-
-
     // kiểm tra Họ và Tên
     function kiemTraHoTen() {
         var thongTin = document.getElementById("txtHoTen").value;
@@ -22,6 +19,7 @@ window.onload = function () {
     });
     //Kiểm tra ngày sinh
     function kiemTraNgaySinh() {
+        
         // Lấy giá trị ngày sinh từ phần tử input
         var ngaySinh = document.getElementById("txtNgaySinh").value;
     
