@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/all.min.css">
     <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/js/all.min.js">
-    <script src="../js/main.js"></script>
+    <script src="../js/validate.js"></script>
+   
 </head>
 
 <body>
@@ -68,22 +69,70 @@
             </ul>
         </nav>
         <!-- modal  -->
-        <div class="modal" id="modal">
-            <div class="modal-inner">
+        <div class=" modal__2" id="modal">
+            <div class="modal-inner-2">
+                <form action="" class="form-signup">
+                    
+
+                    
+                    <h2>Thông tin cá nhân</h2>
+
+
+                    <div class="form-group">
+                        
+                        <input type="text" placeholder="Họ và Tên" id="txtHoTen">
+                        <p class="erorr" id="tbHoTen">*</p>
+                        
+                    </div>
+                    
+                    <div class="form-group">
+                        
+                        <input type="date" placeholder="Ngày sinh" id=""> 
+                    </div>
+                    <div class="form-group radio__gender">
+                        <input type="radio" name="gender" id="male"> <label for="male">Nam</label>
+                        <input type="radio" name="gender" id="female"> <labe for="female">Nữ</labe>   
+                    </div>
+                    <p class="erorr" id="tbHoTen" style="text-align: left;">Không được làm bê đê</p>
+                    
+                    <div class="form-group">
+                        
+                        <input type="text" placeholder="Địa chỉ" id=""> 
+                    <p class="erorr" id="tbHoTen" style="text-align: left;">Vô gia cư cút</p>
+
+                        
+                    </div>
+                    <div class="form-group">
+                        
+                        <input type="text" placeholder="Điện thoại" id=""> 
+                        <p class="erorr" id="tbHoTen" style="text-align: left;">Không điện thoại cút</p>
+                        
+                        
+                    </div>
+                    <div class="form-group">
+                        
+                        <input type="email" placeholder="Email" id=""> 
+                        <p class="erorr" id="tbHoTen" style="text-align: left;">Không email cút</p>
+
+                        
+                    </div>
+                    
+                    
+                    
+                    
+                </form>
                 <form action="" class="form-signup">
                     
 
                     <div class="user">
                         <img src="../img/login.png" alt="" width="100%" height="100%">
                     </div>
-                    <h2>Đăng nhập</h2>
-
+                    <h2>Đăng kí</h2>
 
                     <div class="form-group">
                         
-                        <input type="text" placeholder="Tài khoản" id="LoginEmail"> 
+                        <input type="text" placeholder="Tài khoản" id=""> 
                     </div>
-                    
 
                     <div class="form-group">
                         
@@ -103,6 +152,7 @@
                     </div>
                     
                 </form>
+                
             </div>
         </div>
         <!-- end modal  -->
