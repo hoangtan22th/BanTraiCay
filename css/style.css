@@ -915,3 +915,42 @@ header{
     background-color: #0A68FF;
 
 }
+
+@media screen and (max-width: 960px) {
+    .header__phone,.header__tools{
+        display: none;
+    }
+    .product__list{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .gioithieu__hinhanh{
+        grid-template-columns: 1fr 1fr ;
+
+    }
+}
+@media screen and (max-width: 720px) {
+    .header__phone,.header__tools{
+        display: none;
+    }
+    .product__list{
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: unset;
+    }
+    .sidebar__list li a{
+        font-size: 13px;
+    }
+    .sidebar {
+        height: 650px;
+    }
+    .sidebar__title{
+        font-size: 15px;
+    }
+    .gioithieu__hinhanh{
+        grid-template-columns: 1fr 1fr ;
+
+    }
+}
