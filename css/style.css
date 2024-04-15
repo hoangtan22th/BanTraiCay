@@ -1,10 +1,10 @@
 :root {
-    --color-xanh: #39B54A;
-    --color-xanh-dam: #006F45;
+
     --color-xam: #484546;
     --color-xam-hover: #E5E5E5;
     --color-xanh-bien: #4993E8;
     --color-xanhbien-hover: #CEE1FF;
+    --color-xanhbien-hover2:#136fd8;
     --color-xam-2: #DDDDE3;
 
 }
@@ -196,7 +196,7 @@ header{
 
 .nav ul li:hover {
     background-color: white;
-    color: var(--color-xanh-dam);
+   
 
 
 }
@@ -363,6 +363,10 @@ header{
     background-color: var(--color-xanh-bien);
     color: white;
     cursor: pointer;
+
+}
+#product__btn__details:hover{
+    background-color: #136fd8;
 
 }
 .product__btn i{
@@ -549,6 +553,10 @@ header{
     color: white;
     cursor: pointer;
     margin-bottom: 10px;
+}
+.buy__btn:hover{
+    background-color: rgb(170, 7, 7);
+
 }
 .btn__pre{
     width: 25px;
@@ -770,4 +778,46 @@ header{
 .gioithieu__hinhanh img:hover{
     transform: scale(1.01);
     cursor: pointer;
+}
+
+
+
+
+/* giỏ hàng  */
+
+#table__cart {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+}
+
+#table__cart th, #table__cart td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+#table__cart td{
+    /* background-color: #ddd; */
+
+}
+#table__cart th {
+    background-color:var(--color-xanh-bien);
+    font-weight: bold;
+}
+#cart__img{
+    width: 100%;
+    height: 200px;
+}
+
+.block__btn__buy{
+    text-align: right;
+}
+.btn__buy{
+    width: 150px;
+    height: 40px;
+    background-color: var(--color-xanh-bien);
+    border: none;
+    outline: none;
+    
+
 }

@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang đăng kí</title>
+    <title>Trang giỏ hàng</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/all.min.css">
     <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/js/all.min.js">
-    <script src="../js/validate.js"></script>
+    <script src="../js/cart.js"></script>
+
+
 
 </head>
 
@@ -16,7 +18,7 @@
 
     <div class="wrapper">
         <header>
-
+            <!-- <div id="userInfo">eeeeee</div> -->
             <div class="header">
                 <div class="header__logo">
                     <a href="../html/home.html">
@@ -77,107 +79,53 @@
                 <li><a href="#"><span>LIÊN HỆ</span></a></li>
             </ul>
         </nav>
-        <!-- modal  -->
-        <div class=" modal__2" id="modal">
-            <div class="modal-inner-2">
-                <form action="" class="form-signup">
+        <div class="container">
+            <table id="table__cart">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Hình ảnh</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Đơn giá</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền</th>
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                    <tr id="cart__product">
+                        <td >
+                            <span id="cart__stt"></span>
+                        </td>
+                        <td >
+                            <!-- <img src="" alt="" id="cart__img"> -->
+                        </td>
+                        <td >
+                           <span id="cart__ten"> </span>
+                        </td>
+                        <td >
+                            <span id="cart__dongia" ></span>
+                        </td>
+                        <td >
+                            <span id="cart__soluong"></span>
+                        </td>
+                        <td >
+                            <span id="cart__thanhtien"></span>
+                        </td>
+                    </tr>
+                   
+                </tbody>
+                <tfoot>
 
-
-
-                    <h2>Thông tin cá nhân</h2>
-
-
-                    <div class="form-group">
-
-                        <input type="text" placeholder="Họ và Tên" id="txtHoTen">
-                        <p class="erorr" id="tbHoTen">*</p>
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <input type="date" placeholder="Ngày sinh" id="txtNgaySinh">
-                    </div>
-                    <p class="erorr" id="tbNgaySinh" style="text-align: left;">*</p>
-
-                    <div class="form-group radio__gender" id="txtGender">
-                        <input type="radio" name="gender" id="male"> <label for="male">Nam</label>
-                        <input type="radio" name="gender" id="female">
-                        <labe for="female">Nữ</labe>
-                    </div>
-                    <p class="erorr" id="tbGender" style="text-align: left;">*</p>
-
-
-                    <div class="form-group">
-
-                        <input type="text" placeholder="Địa chỉ" id="txtDiaChi">
-                        <p class="erorr" id="tbDiaChi" style="text-align: left;">*</p>
-
-
-                    </div>
-                    <div class="form-group">
-
-                        <input type="text" placeholder="Điện thoại" id="txtDienThoai">
-                        <p class="erorr" id="tbDienThoai" style="text-align: left;">*</p>
-
-
-                    </div>
-                    <div class="form-group">
-
-                        <input type="email" placeholder="Email" id="txtEmail">
-                        <p class="erorr" id="tbEmail" style="text-align: left;">*</p>
-
-
-                    </div>
-
-
-
-
-                </form>
-                <form action="" class="form-signup">
-
-
-                    <div class="user">
-                        <img src="../img/login.png" alt="" width="100%" height="100%">
-                    </div>
-                    <h2>Đăng kí</h2>
-
-                    <div class="form-group">
-
-                        <input type="text" placeholder="Tài khoản" id="txtTaiKhoan">
-                        <p class="erorr" id="tbTaiKhoan">*</p>
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <input type="password" autocomplete="current-password" id="txtMatKhau" placeholder="Mật khẩu">
-                        <p class="erorr" id="tbMatKhau">*</p>
-
-                    </div>
-                    <div class="form-group">
-                        <input type="password" autocomplete="current-password" id="txtMatKhau2"
-                            placeholder="Nhập Lại Mật khẩu">
-                        <p class="erorr" id="tbMatKhau2">*</p>
-
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" name="" id="">
-                        <span>Bằng việc Đăng ký, bạn đã đọc và đồng ý với <a href="#">Điều khoản sử dụng</a> và <a
-                                href="#">Chính sách bảo mật</a> của TanFruits</span>
-                    </div>
-                    <button class="btn__signup" id="Signup">Đăng Ký</button>
-                    <div class="dangkitkmoi">
-                        <p>Đã có tài khoản?</p>
-                        <a href="../html/login.html" style="text-indent: 10px; color: blue; font-weight: bold;"> Đăng
-                            nhập ngay</a>
-                    </div>
-
-                </form>
-
+                </tfoot>
+                
+            </table>
+            <div class="block__btn__buy">
+                <button class="btn__buy" id="btn__buy">Mua ngay</button>
             </div>
+
         </div>
-        <!-- end modal  -->
+
         <footer id="footer">
             <div class="container">
                 <div class="footer">
@@ -257,6 +205,8 @@
                 </div>
             </div>
         </footer>
+
+
     </div>
 
 </body>

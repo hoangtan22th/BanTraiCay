@@ -24,9 +24,19 @@ window.addEventListener('load', function () {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = parseInt(urlParams.get('product')) || 0;
 
+
    
     displayProduct(products[productId]);
 
+    // // 
+    // const urlParams1 = new URLSearchParams(window.location.search);
+    // const productId1 = parseInt(urlParams1.get('cart__product')) || 0;
+    // displayProduct1(products[productId1]);
+
+
+
+
+    
 
 
 
@@ -38,6 +48,8 @@ window.addEventListener('load', function () {
     const priceElement = document.getElementById('details__total__price');
 
    
+
+
     const giaTienText = priceElement.textContent.replace('.', '');
 
     const giaTien = parseFloat(giaTienText);
@@ -173,3 +185,12 @@ function displayProduct(product) {
     document.getElementById('thuonghieu').innerText = product.thuongHieu;
 }
 
+// function displayProduct1(cart__product){
+//     document.getElementById('cart__img').innerText = product.image;
+//     document.getElementById('cart__img').innerText = product.image;
+//     document.getElementById('cart__img').innerText = product.image;
+//     document.getElementById('cart__img').innerText = product.image;
+//     document.getElementById('cart__img').innerText = product.image;
+
+
+// }

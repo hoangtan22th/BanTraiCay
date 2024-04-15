@@ -11,9 +11,15 @@ window.onload = function () {
 
         console.log(user);
         console.log(data);
+        if(username == "" || password == "" ){
+            alert("Vui lòng nhập đủ thông tin!!");
 
-        
-        if(username == data.username && password == data.password)
+        }
+        else if(username != data.username || password != data.password){
+            alert("Sai tài khoản hoặc mật khẩu!!");
+
+        }
+        else if(username == data.username && password == data.password)
         {
             localStorage.setItem('Login',true);
             alert("Đăng nhập thành công!!");
@@ -21,7 +27,7 @@ window.onload = function () {
             window.location.href = "../html/home.html";
         }
         else{
-            alert("Đm nhập không đúng");
+            alert("Vui lòng nhập thông tin!!");
         }
     })
 

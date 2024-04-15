@@ -8,7 +8,7 @@ window.onload = function () {
             document.getElementById("tbHoTen").innerHTML = "";
             return true;
         } else {
-            document.getElementById("tbHoTen").innerHTML = "vd : Nguyen Hoang và không rỗng";
+            document.getElementById("tbHoTen").innerHTML = "Họ tên ' không chứa dấu ' và không rỗng";
             return false;
 
         }
@@ -68,12 +68,12 @@ window.onload = function () {
     // Kiểm tra Địa chỉ
     function kiemTraDiaChi() {
         var thongTin = document.getElementById("txtDiaChi").value;
-        var regex = /^[A-Za-z0-9\s]+$/;
+        var regex = /^[A-Za-z0-9\s//]+$/;
         if (regex.test(thongTin)) {
             document.getElementById("tbDiaChi").innerHTML = "";
             return true;
         } else {
-            document.getElementById("tbDiaChi").innerHTML = "Địa chỉ không được rỗng";
+            document.getElementById("tbDiaChi").innerHTML = "Địa chỉ ' không chứa dấu ' và không được rỗng";
             return false;
         }
     }
@@ -106,7 +106,7 @@ window.onload = function () {
             document.getElementById("tbEmail").innerHTML = "";
             return true;
         } else {
-            document.getElementById("tbEmail").innerHTML = "Email phải đúng cú pháp @.com";
+            document.getElementById("tbEmail").innerHTML = "Email phải đúng cú pháp @gmail.com";
             return false;
         }
     }
@@ -172,7 +172,7 @@ window.onload = function () {
 
     document.getElementById("Signup").addEventListener("click", function () {
         event.preventDefault(); 
-
+        
        
         if (kiemTraHoTen() &&kiemTraNgaySinh() && kiemTraGioiTinh() && kiemTraDiaChi() &&
             kiemTraDienThoai() &&
@@ -191,8 +191,7 @@ window.onload = function () {
             localStorage.setItem("user",json);
 
             alert("Đăng ký thành công!");
-
-
+            window.location.href = "../html/home.html";
 
         } else {
 

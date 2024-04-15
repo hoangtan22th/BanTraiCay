@@ -16,7 +16,7 @@
 
     <div class="wrapper">
         <header>
-
+            <!-- <div id="userInfo">eeeeee</div> -->
             <div class="header">
                 <div class="header__logo">
                     <a href="../html/home.html">
@@ -25,8 +25,9 @@
                 </div>
                 <div class="header__search">
                     <img src="../img/search.png" alt="">
-                    <input type="text" placeholder="Bạn cần tìm sản phẩm gì? " class="header__search__input">
-                    <a href="#">Tìm</a>
+                    <input type="text" placeholder="Bạn cần tìm sản phẩm gì? " class="header__search__input"
+                        id="header__search__input">
+                    <a href="#" id="btn__tim">Tìm</a>
                 </div>
                 <div class="header__phone">
                     <i class="fa-solid fa-headphones-simple"
@@ -43,17 +44,25 @@
                             <span style="color:var(--color-xanh-bien);">Trang chủ</span>
                         </div>
                     </a>
-                    <a href="#">
-                        <a href="../html/login.html" class="header__login">
-                            <img src="../img/face.png" alt="" width="23px" height="23px" style="margin-right: 10px;">
-                            <span style="color:var(--color-xam);">Tài khoản</span>
-                        </a>
-
+                    <a href="../html/login.html" class="header__login">
+                        <img id="iconNoLogin" src="../img/face.png" alt="" width="23px" height="23px"
+                            style="margin-right: 10px;">
+                        <span id="userNoId" style="color:var(--color-xam);">Tài khoản</span>
                     </a>
-                    <a href="#">
+                    <div style="display: flex; align-items: center;
+                        padding: 10px;">
+                        <img id="iconLogin" src="../img/face.png" alt="" width="23px" height="23px"
+                            style="margin-right: 10px;">
+                        <span id="userId" style="color:var(--color-xam);"></span>
+                    </div>
+
+                    <button class="btn__logout" id="btn__logout">Đăng xuất</button>
+
+                    <a href="../html/cart.html">
                         <div class="header__cart">
                             <i class="fa-solid fa-cart-shopping"
-                                style="font-size: 23px; color: var(--color-xanh-bien);"></i>
+                                style="font-size: 23px; color: var(--color-xanh-bien); margin-right: 10px;"></i>
+                            <span>Giỏ hàng</span>
                         </div>
                     </a>
                 </div>
@@ -61,11 +70,11 @@
         </header>
         <nav class="nav">
             <ul class="nav__menu">
-                <li><a href="../html/home.html">TRANG CHỦ</a></li>
-                <li><a href="../html/gioithieu.html">GIỚI THIỆU</a></li>
-                <li><a href="../html/product.html">SẢN PHẨM</a></li>
-                <li><a href="#">KHUYẾN MÃI</a></li>
-                <li><a href="#">LIÊN HỆ</a></li>
+                <li><a href="../html/home.html"><span>TRANG CHỦ</span></a></li>
+                <li><a href="../html/gioithieu.html"><span>GIỚI THIỆU</span></a></li>
+                <li><a href="../html/product.html"><span>SẢN PHẨM</span></a></li>
+                <li><a href="../html/sitemap.html"><span>SITE MAP</span></a></li>
+                <li><a href="#"><span>LIÊN HỆ</span></a></li>
             </ul>
         </nav>
 

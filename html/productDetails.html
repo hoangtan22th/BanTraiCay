@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/all.min.css">
     <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/js/all.min.js">
     <script src="../js/main.js"></script>
+    <script src="../js/details.js"></script>
     <script src="../js/total.js"></script>
 </head>
 
@@ -25,8 +26,9 @@
                 </div>
                 <div class="header__search">
                     <img src="../img/search.png" alt="">
-                    <input type="text" placeholder="Bạn cần tìm sản phẩm gì? " class="header__search__input">
-                    <a href="#">Tìm</a>
+                    <input type="text" placeholder="Bạn cần tìm sản phẩm gì? " class="header__search__input"
+                        id="header__search__input">
+                    <a href="#" id="btn__tim">Tìm</a>
                 </div>
                 <div class="header__phone">
                     <i class="fa-solid fa-headphones-simple"
@@ -57,10 +59,11 @@
 
                     <button class="btn__logout" id="btn__logout">Đăng xuất</button>
 
-                    <a href="#">
+                    <a href="../html/cart.html">
                         <div class="header__cart">
                             <i class="fa-solid fa-cart-shopping"
-                                style="font-size: 23px; color: var(--color-xanh-bien);"></i>
+                                style="font-size: 23px; color: var(--color-xanh-bien); margin-right: 10px;"></i>
+                            <span>Giỏ hàng</span>
                         </div>
                     </a>
                 </div>
@@ -68,11 +71,11 @@
         </header>
         <nav class="nav">
             <ul class="nav__menu">
-                <li><a href="../html/home.html">TRANG CHỦ</a></li>
-                <li><a href="../html/gioithieu.html">GIỚI THIỆU</a></li>
-                <li><a href="../html/product.html">SẢN PHẨM</a></li>
-                <li><a href="#">KHUYẾN MÃI</a></li>
-                <li><a href="#">LIÊN HỆ</a></li>
+                <li><a href="../html/home.html"><span>TRANG CHỦ</span></a></li>
+                <li><a href="../html/gioithieu.html"><span>GIỚI THIỆU</span></a></li>
+                <li><a href="../html/product.html"><span>SẢN PHẨM</span></a></li>
+                <li><a href="../html/sitemap.html"><span>SITE MAP</span></a></li>
+                <li><a href="#"><span>LIÊN HỆ</span></a></li>
             </ul>
         </nav>
         <div class="container">
@@ -166,15 +169,15 @@
                         <div class="details__total__title">
                             <p style="margin:0px 10px;">Số lượng</p>
                             <button class="btn__pre" id="btn__pre">-</button>
-                            <p class="details__number">1</p>
+                            <p class="details__number" id="details__number">1</p>
                             <button class="btn__next" id="btn__next">+</button>
                         </div>
                         <p class="details__total__tamtinh">Tạm tính</p>
                         <p class="details__total__price" id="details__total__price"></p>
-                        <button class="buy__btn" type="submit">
+                        <button class="buy__btn" id="buy__btn" type="submit">
                             <span> Mua ngay</span>
                         </button>
-                        <button class="product__btn" type="submit">
+                        <button class="product__btn" id="product__btn__details" type="submit">
                             <span> Thêm vào giỏ</span> <i class="fa-solid fa-plus"></i>
                         </button>
                     </div>
