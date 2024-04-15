@@ -24,25 +24,25 @@ window.addEventListener('load', function () {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = parseInt(urlParams.get('product')) || 0;
 
-    // Gọi hàm hiển thị thông tin sản phẩm
+   
     displayProduct(products[productId]);
 
 
 
 
 
-    // Lấy các phần tử cần thiết từ DOM
+   
     const decreaseBtn = document.querySelector('#btn__pre');
     const increaseBtn = document.querySelector('#btn__next');
     const quantityElement = document.querySelector('.details__number');
     const priceElement = document.getElementById('details__total__price');
 
-    // Lấy giá tiền từ nội dung của phần tử và loại bỏ dấu phẩy
+   
     const giaTienText = priceElement.textContent.replace('.', '');
 
     const giaTien = parseFloat(giaTienText);
     console.log(giaTien);
-    // Đặt sự kiện cho nút giảm
+    
     decreaseBtn.addEventListener('click', function () {
         console.log("da click");
 
@@ -54,7 +54,7 @@ window.addEventListener('load', function () {
         }
     });
 
-    // Đặt sự kiện cho nút tăng
+   
     increaseBtn.addEventListener('click', function () {
         console.log("da click");
 
@@ -64,10 +64,10 @@ window.addEventListener('load', function () {
         updatePrice(quantity, giaTien);
     });
 
-    // Hàm cập nhật giá tiền dựa trên số lượng và giá tiền
+   
     function updatePrice(quantity, giaTien) {
-        const totalPrice = quantity * giaTien; // Tính tổng giá tiền
-        priceElement.textContent = totalPrice.toLocaleString() + 'đ'; // Cập nhật tổng giá tiền
+        const totalPrice = quantity * giaTien; 
+        priceElement.textContent = totalPrice.toLocaleString() + 'đ'; 
     }
 
 
@@ -163,7 +163,7 @@ const products = [
 
 // Hàm hiển thị thông tin sản phẩm
 function displayProduct(product) {
-    console.log("Hàm này đã được gọi");
+
     document.getElementById('details__name').innerText = product.name;
     document.getElementById('details__des').innerText = product.name;
     document.getElementById('details__total__price').innerText = `${product.price.toFixed(3)}đ`;

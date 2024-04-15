@@ -390,7 +390,7 @@ header{
 
 
 /* footerr  */
-footer{
+.footer{
     display: flex;
     justify-content: space-between;
     color: black;
@@ -399,13 +399,13 @@ footer{
 
     
 }
-footer .block {
+.footer .block {
     margin-top: 100px;
 }
-footer .block p{
+.footer .block p{
     margin: 10px 0px;
 }
-footer a{
+.footer a{
     color: var(--color-xam);
 }
 .visa{
@@ -710,4 +710,64 @@ footer a{
     color: red;
     font-style: italic;
     
+}
+
+/* table giới thiêu */
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.table td{
+    background-color: #ddd;
+
+}
+.table th {
+    background-color:var(--color-xanh-bien);
+    font-weight: bold;
+}
+
+.gioithieu h1{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 30px 0px;
+    font-style: italic;
+
+
+}
+.gioithieu p{
+    
+   
+    line-height: 30px;
+    color: var(--color-xam);
+}
+.table__title{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 30px 0px;
+}
+.gioithieu__hinhanh{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 30px 0;
+    
+
+}
+.gioithieu__hinhanh img{
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--color-xanh-bien);
+    
+}
+.gioithieu__hinhanh img:hover{
+    transform: scale(1.01);
+    cursor: pointer;
 }

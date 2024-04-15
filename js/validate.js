@@ -171,9 +171,9 @@ window.onload = function () {
     });
 
     document.getElementById("Signup").addEventListener("click", function () {
-        event.preventDefault(); // Ngăn chặn hành vi mặc định của nút
+        event.preventDefault(); 
 
-        // Kiểm tra nếu tất cả là true thì cho phép đăng ký
+       
         if (kiemTraHoTen() &&kiemTraNgaySinh() && kiemTraGioiTinh() && kiemTraDiaChi() &&
             kiemTraDienThoai() &&
             kiemTraEmail() &&
