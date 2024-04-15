@@ -964,6 +964,12 @@ header{
     }
 }
 @media screen and (max-width: 540px) {
+    .Noidung{
+        display: block;
+    }
+    .sidebar {
+        position: static;
+    }
     .nav ul li a{
         
         font-size: 13px !important;
@@ -979,11 +985,11 @@ header{
         font-size: 15px;
         background-color: #F4F4F4;
     }
-    .Noidung {
+    /* .Noidung {
         display: grid;
         grid-template-columns: 3fr 9fr;
         gap: 20px;
-    }
+    } */
 
     .header__phone,.header__tools{
         display: none;
@@ -1001,7 +1007,7 @@ header{
         font-size: 13px;
     }
     .sidebar {
-        height: 650px;
+        height: 485px;
     }
     .sidebar__title{
         font-size: 15px;
