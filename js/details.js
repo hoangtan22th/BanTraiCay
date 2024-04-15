@@ -9,7 +9,11 @@ window.addEventListener('DOMContentLoaded', function () {
             alert("Hãy đăng kí tài khoản để thực hiện")
             window.location.href = "../html/login.html"
         }
+        else{
+            alert("Bị dụ rồi mua được nịt");
+        }
     })
+    
     productBtnDetails.addEventListener('click', function () {
         var isLogin = JSON.parse(localStorage.getItem("Login"));
 

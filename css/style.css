@@ -1,3 +1,6 @@
+
+
+
 :root {
 
     --color-xam: #484546;
@@ -24,9 +27,9 @@ li {
 }
 
 html {
+    scroll-behavior: smooth;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-
+    font-family: sans-serif;
 }
 .wrapper{
     background-color:#F5F5F5 ;
@@ -270,14 +273,19 @@ header{
     height: 60px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     color: var(--color-xanh-bien);
     background-color: white;
     border-bottom: 7px solid var(--color-xanh-bien);
     
+    
+
 
   
     
+}
+.content__title p,.content__title a{
+    margin: 0px 20px;
 }
 .content__title p{
     font-size: 18px;
@@ -288,6 +296,30 @@ header{
     border-bottom: 1px solid var(--color-xanh-bien);
     
 }
+/* banner show  */
+.banner{
+    position: relative;
+}
+.btn__prebanner{
+    position: absolute;
+    top: 40%;
+    left: 10px;
+    
+}
+
+
+.btn__nextbanner{
+    position: absolute;
+    top: 40%;
+    right: 10px;
+}
+.btn__nextbanner:hover,.btn__prebanner:hover{
+    cursor: pointer;
+   
+}
+#bn2{
+    display: none;
+}
 /* sản phẩm  */
 .product__list {
     display: grid;
@@ -295,6 +327,7 @@ header{
     row-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     background-color: white;
+    margin-bottom: 30px;
     
 }
 
@@ -394,12 +427,51 @@ header{
 
 
 /* footerr  */
+.hotro{
+    background-color: #0A68FF;
+    width: 64px;
+    height: 174px;
+    text-align: center;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+    
+}
+.troly{
+    border-bottom: 1px solid white;
+}
+.troly img{
+    width: 32px;
+    height: 32px;
+    background-color: #0A68FF;
+    margin-top: 30px;
+    
+    
+}
+.troly p{
+    font-size: 12px;
+    color: white;
+    margin-bottom: 10px;
+}
+.tinmoi p{
+    font-size: 12px;
+    color: white;
+
+}
+.tinmoi img{
+    width: 32px;
+    background-color: #0A68FF;
+    height: 32px;
+    margin-top: 10px;
+}
 .footer{
     display: flex;
     justify-content: space-between;
     color: black;
     font-size: 13px;
     height: 450px;
+    position: relative;
 
     
 }
@@ -444,10 +516,19 @@ header{
 .details__img{
     border: 1px solid black;
     background-color: white;
-    border-radius: 7px;
-    height: 300px;
+    
+    height: 500px;
     position: sticky;
     top: 10px;
+}
+.block__thongtinsp{
+    display: flex;
+    font-size: 13px;
+    margin: 10px 10px;
+}
+.block__thongtinsp img{
+    width: 15px;
+    height: 15px;
 }
 .details__info{
     
@@ -818,6 +899,12 @@ header{
     background-color: var(--color-xanh-bien);
     border: none;
     outline: none;
+
     
+
+}
+.btn__buy:hover{
+    cursor: pointer;
+    background-color: #0A68FF;
 
 }

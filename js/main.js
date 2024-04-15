@@ -1,6 +1,44 @@
 
 
 window.addEventListener('load', function () {
+
+    if(this.document.querySelector('.banner')){
+        var hinhAnhBanner = document.querySelectorAll('.banner img');
+
+        var chiSoHienTai = 0;
+    
+        function hinhAnhTiepTheo() {
+            hinhAnhBanner[chiSoHienTai].style.display = 'none';
+    
+            chiSoHienTai = (chiSoHienTai + 1) % hinhAnhBanner.length;
+    
+            hinhAnhBanner[chiSoHienTai].style.display = 'block';
+        }
+    
+        function hinhAnhTruocDo() {
+            hinhAnhBanner[chiSoHienTai].style.display = 'none';
+    
+            chiSoHienTai = (chiSoHienTai - 1 + hinhAnhBanner.length) % hinhAnhBanner.length;
+    
+           
+            hinhAnhBanner[chiSoHienTai].style.display = 'block';
+        }
+    
+        
+        document.getElementById('btn__nextbanner').addEventListener('click', hinhAnhTiepTheo);
+    
+       
+        document.getElementById('btn__prebanner').addEventListener('click', hinhAnhTruocDo);
+    
+    
+        function tuDongChuyenDoi() {
+            setInterval(hinhAnhTiepTheo, 2000); 
+        }
+    
+        tuDongChuyenDoi();
+    }
+ 
+
     var isLogin = JSON.parse(localStorage.getItem("Login"));
     var user = JSON.parse(localStorage.getItem("user"));
     if (isLogin == true) {
@@ -25,36 +63,18 @@ window.addEventListener('load', function () {
     const productId = parseInt(urlParams.get('product')) || 0;
 
 
-   
+
     displayProduct(products[productId]);
 
-    // // 
-    // const urlParams1 = new URLSearchParams(window.location.search);
-    // const productId1 = parseInt(urlParams1.get('cart__product')) || 0;
-    // displayProduct1(products[productId1]);
-
-
-
-
-    
-
-
-
-
-   
+ 
     const decreaseBtn = document.querySelector('#btn__pre');
     const increaseBtn = document.querySelector('#btn__next');
     const quantityElement = document.querySelector('.details__number');
     const priceElement = document.getElementById('details__total__price');
-
-   
-
-
     const giaTienText = priceElement.textContent.replace('.', '');
-
     const giaTien = parseFloat(giaTienText);
     console.log(giaTien);
-    
+
     decreaseBtn.addEventListener('click', function () {
         console.log("da click");
 
@@ -66,7 +86,7 @@ window.addEventListener('load', function () {
         }
     });
 
-   
+
     increaseBtn.addEventListener('click', function () {
         console.log("da click");
 
@@ -76,10 +96,10 @@ window.addEventListener('load', function () {
         updatePrice(quantity, giaTien);
     });
 
-   
+
     function updatePrice(quantity, giaTien) {
-        const totalPrice = quantity * giaTien; 
-        priceElement.textContent = totalPrice.toLocaleString() + 'đ'; 
+        const totalPrice = quantity * giaTien;
+        priceElement.textContent = totalPrice.toLocaleString() + 'đ';
     }
 
 
@@ -174,16 +194,22 @@ const products = [
 ];
 
 // Hàm hiển thị thông tin sản phẩm
-function displayProduct(product) {
 
-    document.getElementById('details__name').innerText = product.name;
-    document.getElementById('details__des').innerText = product.name;
-    document.getElementById('details__total__price').innerText = `${product.price.toFixed(3)}đ`;
-    document.getElementById('details__img').src = product.image;
-    document.getElementById('details__price').innerText = `Giá: ${product.price.toFixed(3)}`;
-    document.getElementById('product__sell').innerText = product.sell;
-    document.getElementById('thuonghieu').innerText = product.thuongHieu;
+
+function displayProduct(product) {
+    try {
+        document.getElementById('details__name').innerText = product.name;
+        document.getElementById('details__des').innerText = product.name;
+        document.getElementById('details__total__price').innerText = `${product.price.toFixed(3)}đ`;
+        document.getElementById('details__img').src = product.image;
+        document.getElementById('details__price').innerText = `Giá: ${product.price.toFixed(3)}`;
+        document.getElementById('product__sell').innerText = product.sell;
+        document.getElementById('thuonghieu').innerText = product.thuongHieu;
+    } catch (error) {
+        console.error("Đã xảy ra lỗi khi hiển thị sản phẩm:", error);
+    }
 }
+
 
 // function displayProduct1(cart__product){
 //     document.getElementById('cart__img').innerText = product.image;
