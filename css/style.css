@@ -929,9 +929,66 @@ header{
     }
 }
 @media screen and (max-width: 720px) {
+    .Noidung {
+        display: grid;
+        grid-template-columns: 3fr 9fr;
+        
+        gap: 0px;
+    }
+
     .header__phone,.header__tools{
         display: none;
     }
+    .product__list{
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0px;
+        row-gap: 0px;
+    }
+    .footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: unset;
+    }
+    .sidebar__list li a{
+        font-size: 13px;
+    }
+    .sidebar {
+        height: 650px;
+    }
+    .sidebar__title{
+        font-size: 15px;
+    }
+    .gioithieu__hinhanh{
+        grid-template-columns: 1fr 1fr ;
+
+    }
+}
+@media screen and (max-width: 540px) {
+    .nav ul li a{
+        
+        font-size: 13px !important;
+    }
+    .header__logo img {
+        width: 120px;
+        height: 60px;
+    }
+    .header__search__input {
+        padding: 0px;
+        border: none;
+        outline: none;
+        font-size: 15px;
+        background-color: #F4F4F4;
+    }
+    .Noidung {
+        display: grid;
+        grid-template-columns: 3fr 9fr;
+        gap: 20px;
+    }
+
+    .header__phone,.header__tools{
+        display: none;
+    }
+
     .product__list{
         grid-template-columns: 1fr 1fr;
     }
