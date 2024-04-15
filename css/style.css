@@ -140,7 +140,15 @@ header{
 .header__cart {
     display: flex;
     align-items: center;
+    padding: 10px;
 
+}
+.header__cart span{
+    color: black;
+}
+.header__cart:hover{
+    background-color: var(--color-xam-hover);
+    border-radius: 20px;
 }
 #iconLogin,#btn__logout,#userId{
     display: none;
