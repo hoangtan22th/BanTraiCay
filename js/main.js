@@ -189,7 +189,33 @@ const products = [
         kilogram: "1 kg",
         thuongHieu: "TanFruits"
     },
-
+    // 9
+    {
+        name: "Xoài vàng bến tre",
+        image: "../img/xoai.jpg",
+        sell: "đã bán 432",
+        price: 20.000,
+        kilogram: "1 kg",
+        thuongHieu: "TanFruits"
+    },
+    // 10
+    {
+        name: "Chuối già mũi né",
+        image: "../img/chuoi.jpg",
+        sell: "đã bán 300",
+        price: 90.000,
+        kilogram: "1 kg",
+        thuongHieu: "TanFruits"
+    },
+    // 11
+    {
+        name: "Cam nguyên trái",
+        image: "../img/cam.jpg",
+        sell: "đã bán 123",
+        price: 10.000,
+        kilogram: "1 kg",
+        thuongHieu: "TanFruits"
+    },
 
 ];
 

@@ -323,6 +323,7 @@ header{
 }
 .btn__nextbanner:hover,.btn__prebanner:hover{
     cursor: pointer;
+    color: #484546 !important;
    
 }
 #bn2{
