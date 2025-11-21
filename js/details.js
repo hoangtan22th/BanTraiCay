@@ -1,53 +1,106 @@
-window.addEventListener('DOMContentLoaded', function () {
-    var productBtnDetails = document.getElementById('product__btn__details');
-    var productBtnBuy = document.getElementById('buy__btn');
+document.addEventListener("DOMContentLoaded", function () {
+  const quantityElement = document.querySelector(".details__number");
+  const priceElement = document.getElementById("details__price");
+  const totalPriceElement = document.getElementById("details__total__price");
+  const productBtnDetails = document.getElementById("product__btn__details");
+  const productBtnBuy = document.getElementById("buy__btn");
+  const decreaseBtn = document.querySelector("#btn__pre");
+  const increaseBtn = document.querySelector("#btn__next");
 
-    productBtnBuy.addEventListener('click',()=>{
-        var isLogin = JSON.parse(localStorage.getItem("Login"));
+  let basePrice = 0;
 
-        if (isLogin == false) {
-            alert("Hãy đăng kí tài khoản để thực hiện")
-            window.location.href = "../html/login.html"
-        }
-        else{
-            alert("Bị dụ rồi mua được nịt");
-        }
-    })
-    
-    productBtnDetails.addEventListener('click', function () {
-        var isLogin = JSON.parse(localStorage.getItem("Login"));
+  if (priceElement) {
+    const priceText = priceElement.textContent
+      .replace("Giá: ", "")
+      .replace("đ", "")
+      .replace(/\./g, "");
+    basePrice = parseFloat(priceText) || 0;
+    updateTotalPrice(parseInt(quantityElement.textContent) || 1);
+  }
 
-        if (isLogin == false) {
-            alert("Hãy đăng kí tài khoản để thực hiện")
-            window.location.href = "../html/login.html"
-        }
-        else {
-            var detailsDes = document.getElementById('details__des').textContent;
-            var detailsPrice = document.getElementById('details__price').textContent;
-            var detailsImg = document.getElementById('details__img').src;
-            var detailsNumber = document.getElementById('details__number').textContent;
-            var detailsTotalPrice = document.getElementById('details__total__price').textContent;
+  function updateTotalPrice(quantity) {
+    if (isNaN(basePrice)) basePrice = 0;
+    const totalPrice = quantity * basePrice;
+    if (totalPriceElement) {
+      totalPriceElement.textContent = totalPrice.toLocaleString("vi-VN") + "đ";
+    }
+  }
 
-            // Tạo một đối tượng sản phẩm
-            var sanPham = {
-                tenSP: detailsDes,
-                giaSP: detailsPrice,
-                hinhSP: detailsImg,
-                soLuong: detailsNumber,
-                tongGiaSP: detailsTotalPrice
-            };
-
-            // Lấy danh sách sản phẩm từ localStorage
-            var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham')) || [];
-
-            // Thêm sản phẩm vào danh sách
-            danhSachSanPham.push(sanPham);
-
-            // Lưu danh sách sản phẩm mới vào localStorage
-            localStorage.setItem('danhSachSanPham', JSON.stringify(danhSachSanPham));
-
-            // Chuyển hướng người dùng đến trang cart.html
-            window.location.href = 'cart.html';
-        }
+  if (decreaseBtn) {
+    decreaseBtn.addEventListener("click", function () {
+      let quantity = parseInt(quantityElement.textContent);
+      if (quantity > 1) {
+        quantity--;
+        quantityElement.textContent = quantity;
+        updateTotalPrice(quantity);
+      }
     });
+  }
+
+  if (increaseBtn) {
+    increaseBtn.addEventListener("click", function () {
+      let quantity = parseInt(quantityElement.textContent);
+      quantity++;
+      quantityElement.textContent = quantity;
+      updateTotalPrice(quantity);
+    });
+  }
+
+  function checkLogin(callback) {
+    var isLogin = JSON.parse(localStorage.getItem("Login"));
+    if (!isLogin) {
+      alert("Hãy đăng nhập để thực hiện chức năng này.");
+      window.location.href = "../html/login.html";
+      return false;
+    }
+    callback();
+  }
+
+  if (productBtnBuy) {
+    productBtnBuy.addEventListener("click", () => {
+      checkLogin(() => {
+        alert("Đã chuyển đến trang thanh toán (chưa xây dựng).");
+      });
+    });
+  }
+
+  if (productBtnDetails) {
+    productBtnDetails.addEventListener("click", function () {
+      checkLogin(() => {
+        const productName = document.getElementById("details__des").textContent;
+        const productPrice = basePrice; // Đơn giá dạng số
+        const productImage = document.getElementById("details__img").src;
+        const quantity = parseInt(quantityElement.textContent);
+        const totalPrice = quantity * productPrice;
+
+        let danhSachSanPham =
+          JSON.parse(localStorage.getItem("danhSachSanPham")) || [];
+
+        const existingProductIndex = danhSachSanPham.findIndex(
+          (item) => item.tenSP === productName
+        );
+
+        if (existingProductIndex !== -1) {
+          danhSachSanPham[existingProductIndex].soLuong += quantity;
+          danhSachSanPham[existingProductIndex].tongGiaSP += totalPrice;
+        } else {
+          const sanPham = {
+            tenSP: productName,
+            giaSP: productPrice,
+            hinhSP: productImage,
+            soLuong: quantity,
+            tongGiaSP: totalPrice,
+          };
+          danhSachSanPham.push(sanPham);
+        }
+
+        localStorage.setItem(
+          "danhSachSanPham",
+          JSON.stringify(danhSachSanPham)
+        );
+        alert(`Đã thêm ${quantity} sản phẩm ${productName} vào giỏ hàng!`);
+        window.location.href = "cart.html";
+      });
+    });
+  }
 });

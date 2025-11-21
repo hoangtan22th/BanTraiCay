@@ -3,40 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trang giỏ hàng</title>
+    <title>Danh mục sản phẩm</title>
     <link rel="stylesheet" href="../css/style.css" />
     <link
       rel="stylesheet"
       href="../fontawesome-free-6.5.1-web/css/all.min.css"
     />
   </head>
+
   <body>
     <div class="wrapper">
       <div id="header-container"></div>
       <div class="container">
-        <table id="table__cart">
-          <thead>
-            <tr>
-              <th>STT</th>
-              <th>Hình ảnh</th>
-              <th>Tên sản phẩm</th>
-              <th>Đơn giá</th>
-              <th>Số lượng</th>
-              <th>Thành tiền</th>
-              <th>Hành động</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-          <tfoot></tfoot>
-        </table>
-        <div class="block__btn__buy">
-          <button class="btn__buy" id="btn__buy">Mua ngay</button>
+        <div class="Noidung">
+          <div id="sidebar-container"></div>
+          <div class="content">
+            <div class="content__title">
+              <p class="category__title">Sản phẩm đang tải...</p>
+            </div>
+            <div class="product__list">
+              <p style="padding: 20px; text-align: center">
+                Đang tải danh sách sản phẩm...
+              </p>
+            </div>
+          </div>
         </div>
       </div>
+
       <div id="footer-container"></div>
     </div>
     <script src="../js/module_loader.js"></script>
-    <script src="../js/cart.js"></script>
+    <script src="../js/main.js"></script>
     <script src="../js/search.js"></script>
+    <script src="../js/category_loader.js"></script>
   </body>
 </html>

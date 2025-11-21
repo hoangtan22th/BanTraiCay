@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hóa đơn thanh toán - TanFruits</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="../fontawesome-free-6.5.1-web/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="header-container"></div>
+      <div class="container">
+        <div class="invoice-container">
+          <div class="invoice-header">
+            <h1>HÓA ĐƠN BÁN HÀNG</h1>
+            <p>TanFruits - Trái cây tươi ngon</p>
+            <p>Địa chỉ: 12 Nguyễn Văn Bảo, Gò Vấp, TP.HCM</p>
+            <p>Hotline: 0907 631 248</p>
+          </div>
+          <div class="invoice-info">
+            <div class="info-row">
+              <span>Khách hàng:</span>
+              <span id="inv-customer-name">...</span>
+            </div>
+            <div class="info-row">
+              <span>Ngày đặt:</span>
+              <span id="inv-date">...</span>
+            </div>
+            <div class="info-row">
+              <span>Mã đơn hàng:</span>
+              <span id="inv-id">...</span>
+            </div>
+          </div>
+
+          <table class="invoice-table">
+            <thead>
+              <tr>
+                <th>SL</th>
+                <th>Tên sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Thành tiền</th>
+              </tr>
+            </thead>
+            <tbody id="inv-items"></tbody>
+          </table>
+
+          <div class="invoice-total">
+            <span>TỔNG CỘNG:</span>
+            <span id="inv-total-price">0đ</span>
+          </div>
+
+          <div class="invoice-footer">
+            <p>Cảm ơn quý khách đã mua hàng!</p>
+            <p>Hẹn gặp lại.</p>
+          </div>
+
+          <div class="invoice-actions">
+            <button onclick="window.print()" class="btn-print">
+              <i class="fa-solid fa-print"></i> In hóa đơn
+            </button>
+            <a href="home.html" class="btn-home">Về trang chủ</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="footer-container"></div>
+    </div>
+
+    <script src="../js/search.js"></script>
+    <script src="../js/module_loader.js"></script>
+    <script src="../js/invoice.js"></script>
+  </body>
+</html>
